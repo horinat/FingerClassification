@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FingerClassification</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>指文字しりとり</header>
+    <main>
+      <div class="left">
+        <div id="console">
+          <div>Please Start</div>
+        </div>
+      </div>
+      <div class="center">
+        <video id="video" poster="img/start_bt.png" width="480" height="360"></video>
+        <div class="userInput">
+          <input id="textInput" type="text" maxlength="10" name="msg">
+          <input id="buttonInput" type="submit" value="▶">
+        </div>
+        <div id="box"></div>
+      </div>
+      <div class="right">
+        <input id="support-bt" type="submit" value="？">
+        <div id="support-img"><img src="img/finger.jpg" width="250px"></div>
+      </div>
+    </main>
+    <footer>@dentotsu</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <script>
+      bubbly({
+      colorStart: '#fff4e6',
+      colorStop: '#ffe9e4',
+      blur:1,
+      compose: 'source-over',
+      bubbleFunc:() => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
+      });
+    </script>
+  </body>
+</html>
